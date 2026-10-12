@@ -123,6 +123,254 @@ const comboNames = {
   "D5-D6": ["从0到1造物者", "你擅长把一个模糊念头做成第一个可用版本。"]
 };
 
+const characterProfiles = {
+  MULTI: {
+    name: "万花筒猫",
+    label: "场景切换型多面手",
+    note: "随场景切换武器，既能观察全局，也能马上换一种做法。",
+    species: "cat",
+    motion: "orbit",
+    body: "#f3b65f",
+    accent: "#ed836d",
+    shadow: "#8f5d59",
+    prop: "kaleidoscope"
+  },
+  "D1-D2": {
+    name: "探矿猫",
+    label: "深挖型成长者",
+    note: "先找到问题的矿脉，再把挖到的经验带去下一个领域。",
+    species: "cat",
+    motion: "float",
+    body: "#8ca7b7",
+    accent: "#e4b66e",
+    shadow: "#536c78",
+    prop: "magnifier"
+  },
+  "D1-D3": {
+    name: "纸飞机狐",
+    label: "复杂问题翻译官",
+    note: "把一团乱麻折成别人一看就懂、还能接住的下一步。",
+    species: "fox",
+    motion: "sway",
+    body: "#ed836d",
+    accent: "#f6d39a",
+    shadow: "#a84f4a",
+    prop: "paper"
+  },
+  "D1-D4": {
+    name: "月光鹿",
+    label: "共情型洞察家",
+    note: "一边看见问题的骨架，一边听见人心里没有说出口的部分。",
+    species: "deer",
+    motion: "float",
+    body: "#c8a9cf",
+    accent: "#8cb8ad",
+    shadow: "#795e80",
+    prop: "moon"
+  },
+  "D1-D5": {
+    name: "修路熊",
+    label: "问题解决推进器",
+    note: "发现卡点之后，马上把路标、工具和第一步都安排好。",
+    species: "bear",
+    motion: "bounce",
+    body: "#c28b68",
+    accent: "#86a9cb",
+    shadow: "#795040",
+    prop: "toolbelt"
+  },
+  "D1-D6": {
+    name: "机关鼹鼠",
+    label: "新解实验家",
+    note: "旧路堵住时，你会钻到问题底下，摸出一条新通道。",
+    species: "mole",
+    motion: "peek",
+    body: "#9a7d91",
+    accent: "#e29a70",
+    shadow: "#5f4c5b",
+    prop: "gear"
+  },
+  "D2-D3": {
+    name: "星尘鹦鹉",
+    label: "知识传播者",
+    note: "把刚学会的东西重新编排成别人愿意听、记得住的故事。",
+    species: "parrot",
+    motion: "wing",
+    body: "#78b7ad",
+    accent: "#e4b66e",
+    shadow: "#39776f",
+    prop: "radio"
+  },
+  "D2-D4": {
+    name: "茶杯水獭",
+    label: "教练型伙伴",
+    note: "先接住对方，再陪对方把自己的方法慢慢长出来。",
+    species: "otter",
+    motion: "sway",
+    body: "#a98573",
+    accent: "#e9c3a1",
+    shadow: "#705146",
+    prop: "heart"
+  },
+  "D2-D5": {
+    name: "工坊河狸",
+    label: "学以致用派",
+    note: "不把知识放在收藏夹里，而是马上做成能用的工具。",
+    species: "beaver",
+    motion: "hammer",
+    body: "#b9784f",
+    accent: "#86a9cb",
+    shadow: "#704534",
+    prop: "books"
+  },
+  "D2-D6": {
+    name: "拼图变色龙",
+    label: "跨界造物者",
+    note: "把不同领域的零件拼在一起，做出原本没有的用法。",
+    species: "chameleon",
+    motion: "orbit",
+    body: "#86b99c",
+    accent: "#d88bd2",
+    shadow: "#4e8068",
+    prop: "puzzle"
+  },
+  "D3-D4": {
+    name: "麦克风小鸟",
+    label: "人群影响者",
+    note: "让别人听懂你的话，也让别人愿意把心里的门打开。",
+    species: "bird",
+    motion: "wing",
+    body: "#80a9d0",
+    accent: "#ed836d",
+    shadow: "#4e6d91",
+    prop: "megaphone"
+  },
+  "D3-D5": {
+    name: "指挥企鹅",
+    label: "项目带动者",
+    note: "把想法说清楚，把人聚起来，再把节奏稳稳往前带。",
+    species: "penguin",
+    motion: "bounce",
+    body: "#345c67",
+    accent: "#e4b66e",
+    shadow: "#193b43",
+    prop: "flag"
+  },
+  "D3-D6": {
+    name: "霓虹狐",
+    label: "内容产品化者",
+    note: "给创意装上好看的外壳，也给它找到真实的使用场景。",
+    species: "fox",
+    motion: "sway",
+    body: "#e18a67",
+    accent: "#9c82d8",
+    shadow: "#9a5047",
+    prop: "palette"
+  },
+  "D4-D5": {
+    name: "围巾大象",
+    label: "团队稳定器",
+    note: "让每个人都被看见，也让合作不至于在细节里散掉。",
+    species: "elephant",
+    motion: "float",
+    body: "#9da8ba",
+    accent: "#ed836d",
+    shadow: "#657081",
+    prop: "scarf"
+  },
+  "D4-D6": {
+    name: "火花小羊",
+    label: "社群点火者",
+    note: "把人的兴趣和情绪接成一条线，让“想做”变成“现在就做”。",
+    species: "sheep",
+    motion: "spark",
+    body: "#e8d7bc",
+    accent: "#ed836d",
+    shadow: "#a88f78",
+    prop: "spark"
+  },
+  "D5-D6": {
+    name: "纸箱机器人",
+    label: "从0到1造物者",
+    note: "不等完美图纸，先把第一个能工作的版本做出来。",
+    species: "robot",
+    motion: "rocket",
+    body: "#86a9cb",
+    accent: "#e4b66e",
+    shadow: "#4d718f",
+    prop: "rocket"
+  }
+};
+
+function characterHead(profile) {
+  const fill = profile.body;
+  const shadow = profile.shadow;
+  switch (profile.species) {
+    case "fox": return `<path fill="${fill}" d="M85 92 52 42l8 72c12-12 24-19 35-22Zm130 0 33-50-8 72c-12-12-24-19-35-22Z"/><path fill="${shadow}" d="m60 42 25 42-25 18Zm180 0-25 42 25 18Z"/><path fill="${fill}" d="M83 86c0-43 27-66 67-66s67 23 67 66-25 78-67 78-67-35-67-78Z"/>`;
+    case "deer": return `<path fill="${shadow}" d="M88 57 67 24m20 29L57 36m145 21 21-33m-20 28 30-20" stroke="${shadow}" stroke-width="9" stroke-linecap="round" fill="none"/><path fill="${fill}" d="M85 92c0-42 28-68 65-68s65 26 65 68-24 72-65 72-65-30-65-72Z"/>`;
+    case "bear": return `<circle fill="${fill}" cx="88" cy="55" r="28"/><circle fill="${fill}" cx="212" cy="55" r="28"/><circle fill="${shadow}" cx="88" cy="55" r="12"/><circle fill="${shadow}" cx="212" cy="55" r="12"/><path fill="${fill}" d="M75 92c0-42 29-68 75-68s75 26 75 68-28 72-75 72-75-30-75-72Z"/>`;
+    case "mole": return `<path fill="${fill}" d="M75 93c0-45 30-69 75-69s75 24 75 69-31 71-75 71-75-26-75-71Z"/><path fill="${shadow}" d="M120 36c10-21 50-21 60 0-21 11-39 11-60 0Z"/>`;
+    case "parrot": return `<path fill="${fill}" d="M82 100c-5-51 22-76 62-76 48 0 73 31 67 78-5 43-32 64-70 64-36 0-55-23-59-66Z"/><path fill="${profile.accent}" d="M196 51c35 12 40 35 17 56l-28-18Z"/><path fill="${shadow}" d="M106 29c-2-21 22-32 34-12l-16 22Z"/>`;
+    case "otter": return `<circle fill="${fill}" cx="88" cy="58" r="26"/><circle fill="${fill}" cx="212" cy="58" r="26"/><path fill="${fill}" d="M75 94c0-42 29-70 75-70s75 28 75 70-30 70-75 70-75-28-75-70Z"/><path fill="${shadow}" d="M133 106c9-8 25-8 34 0-1 19-33 19-34 0Z"/>`;
+    case "beaver": return `<path fill="${fill}" d="M78 93c0-43 29-69 72-69s72 26 72 69-29 72-72 72-72-29-72-72Z"/><path fill="${shadow}" d="M80 122 57 151l33 15 21-27Zm160 0 23 29-33 15-21-27Z"/>`;
+    case "chameleon": return `<path fill="${fill}" d="M75 93c0-43 29-69 75-69s75 26 75 69-29 72-75 72-75-29-75-72Z"/><path fill="none" stroke="${profile.accent}" stroke-width="13" stroke-linecap="round" d="M214 36c32-26 50 16 19 26-20 7-23-12-8-17"/>`;
+    case "bird": return `<path fill="${fill}" d="M75 93c0-46 30-69 75-69s75 23 75 69-30 72-75 72-75-26-75-72Z"/><path fill="${profile.accent}" d="m216 88 51 20-51 20Z"/><path fill="${shadow}" d="M114 27c4-25 32-28 43-7l-19 19Z"/>`;
+    case "penguin": return `<path fill="${fill}" d="M75 94c0-45 28-70 75-70s75 25 75 70-28 71-75 71-75-26-75-71Z"/><path fill="#f7f0e6" d="M105 111c0-34 18-51 45-51s45 17 45 51-18 45-45 45-45-11-45-45Z"/><path fill="${profile.accent}" d="m150 105-12 12 12 11 12-11Z"/>`;
+    case "elephant": return `<path fill="${fill}" d="M70 95c0-44 31-71 80-71s80 27 80 71-31 70-80 70-80-26-80-70Z"/><path fill="${fill}" d="M83 106c-48-19-60 31-28 47 28 13 49-5 50-23"/><path fill="${shadow}" d="M227 108c42 3 51 28 30 45-23 18-44 2-43-20"/>`;
+    case "sheep": return `<path fill="${fill}" d="M77 93c0-44 30-70 73-70s73 26 73 70-29 71-73 71-73-27-73-71Z"/><circle fill="${fill}" cx="77" cy="69" r="23"/><circle fill="${fill}" cx="223" cy="69" r="23"/><path fill="${shadow}" d="M104 39c10-19 25-25 38-10 13-15 28-9 38 10-24 11-52 11-76 0Z"/>`;
+    case "robot": return `<rect fill="${fill}" x="71" y="25" width="158" height="141" rx="38"/><path fill="${shadow}" d="M150 25V6" stroke="${shadow}" stroke-width="9" stroke-linecap="round"/><circle fill="${profile.accent}" cx="150" cy="5" r="10"/><rect fill="#f7f0e6" x="91" y="52" width="118" height="63" rx="25"/>`;
+    default: return `<path fill="${fill}" d="M75 92c0-43 29-68 75-68s75 25 75 68-29 72-75 72-75-29-75-72Z"/><path fill="${fill}" d="M87 65 57 28l8 70Zm126 0 30-37-8 70Z"/>`;
+  }
+}
+
+function characterProp(profile) {
+  const a = profile.accent;
+  const s = profile.shadow;
+  const props = {
+    magnifier: `<g class="character-prop"><circle cx="232" cy="190" r="25" fill="none" stroke="${a}" stroke-width="10"/><path d="m250 208 27 27" stroke="${s}" stroke-width="11" stroke-linecap="round"/></g>`,
+    paper: `<g class="character-prop"><path fill="${a}" d="m221 168 71 20-45 57-25-77Z"/><path d="m235 184 35 13-28 9" fill="none" stroke="${s}" stroke-width="6" stroke-linecap="round"/></g>`,
+    moon: `<g class="character-prop"><path fill="${a}" d="M240 170c-30 11-29 55 4 62-39 13-59-48-23-66 7-4 13-3 19 4Z"/></g>`,
+    toolbelt: `<g class="character-prop"><path d="M65 183h170" stroke="${a}" stroke-width="14" stroke-linecap="round"/><path fill="${s}" d="m108 179 17-20 17 20v25h-34Zm50 0 17-20 17 20v25h-34Z"/></g>`,
+    gear: `<g class="character-prop"><circle fill="${a}" cx="236" cy="195" r="29"/><circle fill="${s}" cx="236" cy="195" r="10"/><path d="M236 158v14m0 45v14m37-36h-14m-45 0h-14" stroke="${s}" stroke-width="8" stroke-linecap="round"/></g>`,
+    radio: `<g class="character-prop"><rect fill="${a}" x="211" y="164" width="67" height="49" rx="12"/><circle fill="${s}" cx="231" cy="188" r="10"/><path d="M250 181h18m-18 13h18M229 161l-10-26" stroke="${s}" stroke-width="6" stroke-linecap="round"/></g>`,
+    heart: `<g class="character-prop"><path fill="${a}" d="M246 171c-22-24-59 4 0 53 59-49 22-77 0-53Z"/></g>`,
+    books: `<g class="character-prop"><rect fill="${a}" x="210" y="183" width="77" height="19" rx="5" transform="rotate(-10 210 183)"/><rect fill="${s}" x="214" y="202" width="75" height="19" rx="5" transform="rotate(8 214 202)"/><path d="M224 185h45m-38 26h43" stroke="#f7f0e6" stroke-width="4" stroke-linecap="round"/></g>`,
+    puzzle: `<g class="character-prop"><path fill="${a}" d="M217 170h30c-6 18 24 17 18 0h27v29c-18-6-18 24 0 18v28h-30c7-19-24-19-18 0h-27v-29c18 7 18-24 0-18Z"/></g>`,
+    megaphone: `<g class="character-prop"><path fill="${a}" d="m216 178 68-25v69l-68-25Z"/><path d="m216 183-16-8v28l16-6m-1 21 13 23" fill="none" stroke="${s}" stroke-width="8" stroke-linecap="round"/></g>`,
+    flag: `<g class="character-prop"><path d="M230 158v80" stroke="${s}" stroke-width="8" stroke-linecap="round"/><path fill="${a}" d="M234 162h59l-20 23 20 22h-59Z"/></g>`,
+    palette: `<g class="character-prop"><path fill="${a}" d="M238 170c-35-9-61 24-43 52 10 16 29 16 40 4 11-13 24 10 39-13 17-28-9-39-36-43Z"/><circle fill="${s}" cx="223" cy="198" r="6"/><circle fill="${s}" cx="244" cy="184" r="6"/><circle fill="${s}" cx="263" cy="196" r="6"/></g>`,
+    scarf: `<g class="character-prop"><path fill="${a}" d="M76 159c40 18 108 18 148 0v24c-41 20-107 20-148 0Z"/><path fill="${a}" d="M190 179h29l-1 63-27-15Z"/></g>`,
+    spark: `<g class="character-prop"><path fill="${a}" d="m250 160 8 25 26 3-20 17 6 27-21-14-23 14 8-27-20-17 27-3Z"/></g>`,
+    rocket: `<g class="character-prop"><path fill="${a}" d="M247 157c28 14 34 44 12 66l-25-23c-4-18 0-31 13-43Z"/><path fill="${s}" d="m238 196-18 22 27-7Zm20 9 7 27 13-30Z"/><circle fill="#f7f0e6" cx="256" cy="181" r="7"/></g>`,
+    kaleidoscope: `<g class="character-prop"><path fill="${a}" d="m214 170 53 15-12 43-53-15Z"/><path d="m224 181 31 9m-34 3 30 9" stroke="${s}" stroke-width="5" stroke-linecap="round"/><circle fill="#f7f0e6" cx="267" cy="185" r="9"/></g>`
+  };
+  return props[profile.prop] || "";
+}
+
+function renderCharacterSvg(profile) {
+  const fill = profile.body;
+  const accent = profile.accent;
+  const shadow = profile.shadow;
+  const face = profile.species === "robot"
+    ? `<circle class="character-eye" fill="${accent}" cx="126" cy="82" r="10"/><circle class="character-eye" fill="${accent}" cx="174" cy="82" r="10"/><path d="M126 100h48" stroke="${shadow}" stroke-width="7" stroke-linecap="round"/>`
+    : `<ellipse class="character-eye" fill="${shadow}" cx="124" cy="91" rx="7" ry="10"/><ellipse class="character-eye" fill="${shadow}" cx="176" cy="91" rx="7" ry="10"/><path fill="${accent}" d="M143 111q7 8 14 0-7-8-14 0Z"/><path d="M138 124q12 10 24 0" fill="none" stroke="${shadow}" stroke-width="5" stroke-linecap="round"/>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" class="character-svg" viewBox="0 0 300 260" role="img" aria-label="${profile.name}，${profile.label}">
+    <ellipse class="character-ground" fill="${shadow}" opacity=".2" cx="150" cy="236" rx="85" ry="13"/>
+    <circle class="character-halo" fill="${accent}" opacity=".16" cx="150" cy="113" r="112"/>
+    <path fill="${shadow}" d="M106 170c-7 18-4 39 10 51l19-31Zm88 0c7 18 4 39-10 51l-19-31Z"/>
+    <path fill="${fill}" d="M82 156c0-34 29-49 68-49s68 15 68 49-29 61-68 61-68-27-68-61Z"/>
+    ${characterHead(profile)}
+    <path fill="${accent}" opacity=".28" d="M102 150c15 17 81 17 96 0-2 33-21 51-48 51s-46-18-48-51Z"/>
+    ${face}
+    <circle fill="${accent}" opacity=".48" cx="103" cy="114" r="8"/><circle fill="${accent}" opacity=".48" cx="197" cy="114" r="8"/>
+    ${characterProp(profile)}
+  </svg>`;
+}
+
+function renderCharacter(profile) {
+  return `<div class="character-figure motion-${profile.motion}" style="--character-accent:${profile.accent}">${renderCharacterSvg(profile)}</div>`;
+}
+
 const answerLabels = ["完全不像我", "不太像我", "不确定 / 一般", "比较像我", "非常像我"];
 const state = { screen: "password", code: null, current: 0, answers: [], result: null, shared: false,
   remaining: 0, attempt: null, fingerprint: null, busy: false };
@@ -202,10 +450,10 @@ function getType(scores) {
   const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
   const primary = sorted[0][0], secondary = sorted[1][0];
   const range = sorted[0][1] - sorted[sorted.length - 1][1];
-  if (range <= 8) return { primary, secondary, name: "场景切换型多面手", slogan: "你不是只有一个天赋，而是会根据场景切换武器。", combo: "多面手型", balanced: true };
+  if (range <= 8) return { primary, secondary, name: "场景切换型多面手", slogan: "你不是只有一个天赋，而是会根据场景切换武器。", combo: "多面手型", balanced: true, characterKey: "MULTI" };
   const pair = [primary, secondary].sort().join("-");
   const combo = comboNames[pair] || [resultTypes[primary].name, resultTypes[primary].slogan];
-  return { primary, secondary, name: combo[0], slogan: combo[1], combo: resultTypes[primary].combo };
+  return { primary, secondary, name: combo[0], slogan: combo[1], combo: resultTypes[primary].combo, characterKey: pair };
 }
 function getResult(record) {
   if (record.version !== 1 || !/^[a-f0-9-]{36}$/i.test(record.id) ||
@@ -220,6 +468,7 @@ function getResult(record) {
 function renderResult(result) {
   state.result = result;
   const { scores, type, base } = result;
+  const character = characterProfiles[type.characterKey] || characterProfiles.MULTI;
   $("#result-title").textContent = type.name;
   $("#result-slogan").textContent = type.slogan;
   $("#result-summary").textContent = type.balanced ? "你的六个维度比较均衡，不容易被单一标签限制。真正的优势可能来自你在不同场景下的切换能力。" : `你的主优势是「${base.name}」，副优势是「${resultTypes[type.secondary].name}」。你更容易在这两种能力交会的地方，找到自己的独特价值。`;
@@ -227,6 +476,11 @@ function renderResult(result) {
   $("#result-scene").textContent = type.balanced ? "当环境发生变化时，你可能比自己想象中更能调整做法；但也要小心“什么都能做”让别人看不见你的核心标签。" : base.scene;
   $("#result-blindspot").textContent = type.balanced ? "容易因为选项太多而犹豫。建议先选一个场景，把最有用的两项优势组合起来。" : base.blindspot;
   $("#result-experiment").textContent = type.balanced ? "选一个你最近想尝试的方向，只使用你分数最高的两个维度设计一个小项目，7 天后看结果。" : base.experiment;
+  $("#character-art").innerHTML = renderCharacter(character);
+  $("#character-label").textContent = character.label;
+  $("#character-name").textContent = character.name;
+  $("#character-note").textContent = character.note;
+  $("#result-character").setAttribute("aria-label", `${character.name}：${character.note}`);
   const bars = $("#score-bars"); bars.innerHTML = "";
   Object.entries(dimensions).forEach(([key, meta]) => { const row = document.createElement("div"); row.className = "score-row"; row.innerHTML = `<label>${meta.name}</label><div class="score-track"><div class="score-fill" style="width:${scores[key]}%;background:${meta.color}"></div></div><span class="score-value">${Math.round(scores[key])}</span>`; bars.appendChild(row); });
   $("#retake-button").textContent = state.code ? (state.remaining > 0 ? `再测一次（剩余 ${state.remaining} 次）` : "次数已用完 · 更换密码") : "我也来测一测";
@@ -236,12 +490,24 @@ function renderResult(result) {
 function buildResultLink(result) { const url = new URL(window.location.href); url.search = ""; url.hash = ""; url.searchParams.set("result", result.id); return url.toString(); }
 function wrapText(ctx, text, maxWidth) { const chars = Array.from(text); const lines = []; let line = ""; chars.forEach((char) => { const next = line + char; if (ctx.measureText(next).width > maxWidth && line) { lines.push(line); line = char; } else line = next; }); if (line) lines.push(line); return lines; }
 function drawWrapped(ctx, text, x, y, maxWidth, lineHeight, maxLines) { const lines = wrapText(ctx, text, maxWidth).slice(0, maxLines || 99); lines.forEach((line, i) => ctx.fillText(line, x, y + i * lineHeight)); return y + lines.length * lineHeight; }
+function loadSvgImage(svg) {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => resolve(image);
+    image.onerror = () => reject(new Error("角色图片生成失败"));
+    image.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+  });
+}
 async function createResultBlob(result) {
   const canvas = document.createElement("canvas"); canvas.width = 1080; canvas.height = 1860; const ctx = canvas.getContext("2d");
   ctx.fillStyle = "#f6f1e9"; ctx.fillRect(0, 0, canvas.width, canvas.height);
   const gradient = ctx.createLinearGradient(0, 0, canvas.width, 620); gradient.addColorStop(0, "#17383b"); gradient.addColorStop(1, "#315b5e"); ctx.fillStyle = gradient; ctx.fillRect(0, 0, canvas.width, 620);
   ctx.fillStyle = "#e4b66e"; ctx.beginPath(); ctx.arc(980, 110, 220, 0, Math.PI * 2); ctx.fill(); ctx.fillStyle = "#ed836d"; ctx.beginPath(); ctx.arc(70, 550, 150, 0, Math.PI * 2); ctx.fill();
-  ctx.fillStyle = "#f6f1e9"; ctx.font = "700 26px sans-serif"; ctx.fillText("隐藏优势发现测评", 70, 78); ctx.font = "800 56px sans-serif"; ctx.fillText(result.type.name, 70, 250); ctx.font = "600 27px sans-serif"; drawWrapped(ctx, result.type.slogan, 70, 315, 820, 42, 2);
+  ctx.fillStyle = "#f6f1e9"; ctx.font = "700 26px sans-serif"; ctx.fillText("隐藏优势发现测评", 70, 78); ctx.font = "800 56px sans-serif"; ctx.fillText(result.type.name, 70, 250); ctx.font = "600 27px sans-serif"; drawWrapped(ctx, result.type.slogan, 70, 315, 650, 42, 2);
+  const character = characterProfiles[result.type.characterKey] || characterProfiles.MULTI;
+  const characterImage = await loadSvgImage(renderCharacterSvg(character));
+  ctx.drawImage(characterImage, 760, 68, 250, 218);
+  ctx.fillStyle = "#f6f1e9"; ctx.font = "700 20px sans-serif"; ctx.fillText(character.name, 778, 318);
   ctx.font = "500 23px sans-serif"; drawWrapped(ctx, $("#result-mechanism").textContent, 70, 445, 820, 36, 3);
   ctx.fillStyle = "#102a2e"; ctx.font = "800 26px sans-serif"; ctx.fillText("六维优势画像", 70, 720);
   const keys = Object.keys(dimensions); keys.forEach((key, index) => { const y = 780 + index * 78; ctx.font = "600 22px sans-serif"; ctx.fillText(dimensions[key].name, 70, y); ctx.fillStyle = "#dfe5df"; ctx.fillRect(265, y - 21, 630, 18); ctx.fillStyle = dimensions[key].color; ctx.fillRect(265, y - 21, 630 * result.scores[key] / 100, 18); ctx.fillStyle = "#d76658"; ctx.font = "800 22px sans-serif"; ctx.fillText(String(Math.round(result.scores[key])), 925, y); ctx.fillStyle = "#102a2e"; });
