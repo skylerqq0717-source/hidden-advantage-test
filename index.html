@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#102a2e" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="description" content="你总觉得自己没天赋？用48道真实情境题，发现那些被低估的优势。" />
+    <title>隐藏优势发现测评</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" data-action="home">
+          <span class="brand-mark">✦</span>
+          <span>隐藏优势发现测评</span>
+        </a>
+        <span class="topbar-note">48 道真实情境题 · 约 8 分钟</span>
+      </header>
+
+      <section id="screen-password" class="screen active">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow">HIDDEN ADVANTAGE LAB</div>
+            <h1>你总觉得自己没天赋？</h1>
+            <p class="hero-lede">也许你不是没有天赋，只是还没找到让优势显现的场景。</p>
+            <div class="hero-points">
+              <span><i>01</i> 看见反复出现的优势线索</span>
+              <span><i>02</i> 找到更容易进入状态的场景</span>
+              <span><i>03</i> 领走一份可以行动的结果分析</span>
+            </div>
+          </div>
+          <div class="access-card card-surface">
+            <div class="card-kicker">开始之前</div>
+            <h2>输入测评密码</h2>
+            <p>每个密码最多可开启 3 次测评。请按照你过去一年的真实状态作答。</p>
+            <form id="password-form">
+              <label class="field-label" for="password-input">测评密码</label>
+              <div class="input-wrap">
+                <input id="password-input" type="password" maxlength="100" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="请输入密码" aria-describedby="password-error" />
+                <span class="input-icon">↗</span>
+              </div>
+              <div id="password-error" class="form-error" role="alert"></div>
+              <button class="button button-primary button-wide" type="submit">验证密码</button>
+            </form>
+            <div class="privacy-note"><span>▣</span> 每个密码在所有设备上共用 3 次机会，点击开始后扣除 1 次。本页会暂存答题进度，服务器保存六维分数及完成时间。结果仅供自我探索。</div>
+          </div>
+        </div>
+        <div class="bottom-proof"><span class="status-dot"></span> 你的答案没有标准答案，真实比“看起来优秀”更重要</div>
+      </section>
+
+      <section id="screen-start" class="screen">
+        <div class="start-layout">
+          <div class="start-visual card-surface">
+            <div class="orb orb-a"></div><div class="orb orb-b"></div><div class="orb orb-c"></div>
+            <div class="visual-center"><span>✦</span><small>YOUR<br />SIGNAL</small></div>
+            <div class="floating-tag tag-a">被低估的能力</div>
+            <div class="floating-tag tag-b">高能时刻</div>
+            <div class="floating-tag tag-c">适合你的场景</div>
+          </div>
+          <div class="start-copy">
+            <div class="eyebrow">READY WHEN YOU ARE</div>
+            <h2>先别急着给自己下结论。</h2>
+            <p>这不是测“你像哪种人”，而是从工作、学习和生活中的真实行为里，找出你反复做得顺的事。</p>
+            <div class="start-meta">
+              <div><strong>48</strong><span>道题目</span></div>
+              <div><strong>6</strong><span>个优势维度</span></div>
+              <div><strong>3</strong><span>次密码机会</span></div>
+            </div>
+            <div class="usage-line"><span class="status-dot"></span><span id="remaining-text">本密码还可以测试 3 次</span></div>
+            <button id="start-button" class="button button-primary">开始测试 <span>→</span></button>
+            <button class="text-button" data-action="reset-access">更换密码</button>
+            <p id="start-error" class="form-error" role="alert"></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="screen-test" class="screen">
+        <div class="test-head">
+          <div>
+            <div class="eyebrow">QUESTION <span id="question-number">01</span> / 48</div>
+            <h2>凭第一反应作答，别把它当成考试。</h2>
+          </div>
+          <div class="test-progress-copy" id="progress-copy">0%</div>
+        </div>
+        <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+        <div class="question-layout">
+          <div class="question-index card-surface">
+            <span class="index-label">当前维度</span>
+            <strong id="question-dimension">洞察拆解</strong>
+            <p id="dimension-tip">你是否习惯先看见问题的骨架，再决定怎么解决？</p>
+            <div class="mini-dots" id="mini-dots"></div>
+          </div>
+          <div class="question-card card-surface">
+            <div class="question-tag">请根据过去一年作答</div>
+            <h3 id="question-text"></h3>
+            <div id="answer-options" class="answer-options"></div>
+            <div class="question-actions">
+              <button id="back-button" class="button button-ghost">← 上一题</button>
+              <button id="next-button" class="button button-primary" disabled>下一题 <span>→</span></button>
+            </div>
+            <p id="submit-error" class="form-error" role="alert"></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="screen-result" class="screen">
+        <div class="result-topline">
+          <div class="eyebrow">YOUR HIDDEN ADVANTAGE</div>
+          <button class="close-result" data-action="home" aria-label="返回首页">×</button>
+        </div>
+        <div class="result-hero card-surface">
+          <div class="result-hero-copy">
+            <div class="result-badge">测评结果</div>
+            <h2 id="result-title"></h2>
+            <p id="result-slogan" class="result-slogan"></p>
+            <p id="result-summary" class="result-summary"></p>
+          </div>
+          <div class="result-stamp"><span>✦</span><small>YOUR<br />EDGE</small></div>
+        </div>
+        <div class="result-grid">
+          <div class="card-surface score-card">
+            <div class="section-label">六维优势画像</div>
+            <div id="score-bars" class="score-bars"></div>
+          </div>
+          <div class="card-surface insight-card">
+            <div class="section-label">为什么会是这个结果</div>
+            <h3 id="result-mechanism"></h3>
+            <p id="result-scene"></p>
+            <div class="insight-divider"></div>
+            <div class="section-label">你可能忽略的地方</div>
+            <p id="result-blindspot"></p>
+          </div>
+        </div>
+        <div class="card-surface experiment-card">
+          <div class="experiment-icon">↗</div>
+          <div><div class="section-label">给你一个 7 天小实验</div><p id="result-experiment"></p></div>
+        </div>
+        <div class="result-actions">
+          <button id="save-image-button" class="button button-primary">保存测评长图 <span>↓</span></button>
+          <button id="copy-link-button" class="button button-secondary">复制结果链接</button>
+          <button id="retake-button" class="button button-ghost">再测一次</button>
+          <button id="gift-button" class="button button-ghost gift-button">好评有礼 <span>♥</span></button>
+        </div>
+        <div id="share-fallback" hidden><label for="share-url">请长按或选中以下链接复制</label><input id="share-url" readonly /></div>
+        <p class="result-footnote">持有结果链接的人可以查看这份报告，分享前请确认。此测评为探索性自评工具，尚未经过常模与信效度验证，分数不代表人群排名或天赋高低。</p>
+      </section>
+      <section id="screen-loading" class="screen"><div class="card-surface loading-card">
+        <h2 id="loading-message" role="status">正在读取测评结果…</h2>
+        <button id="retry-result" class="button button-primary" hidden>重新加载</button>
+        <button class="text-button" data-action="home">返回首页</button>
+      </div></section>
+    </main>
+
+    <div id="gift-modal" class="modal-backdrop" hidden>
+      <div class="modal card-surface" role="dialog" aria-modal="true" aria-labelledby="gift-title">
+        <button class="modal-close" data-action="close-modal" aria-label="关闭">×</button>
+        <div class="modal-spark">♥</div>
+        <div class="eyebrow">A LITTLE THANK YOU</div>
+        <h2 id="gift-title">好评有礼</h2>
+        <p>店铺好评后，请联系客服并发送好评截图，即可获得 1 元返现。</p>
+        <button class="button button-primary button-wide" data-action="close-modal">知道了</button>
+      </div>
+    </div>
+    <div id="image-modal" class="modal-backdrop" hidden>
+      <div class="modal card-surface image-modal" role="dialog" aria-modal="true" aria-labelledby="image-title">
+        <button class="modal-close" data-action="close-image" aria-label="关闭图片">×</button>
+        <h2 id="image-title">保存你的测评结果</h2>
+        <p>手机：长按下方图片，选择保存到相册。电脑：点击下载图片。若应用内无法保存，可在系统浏览器中打开。</p>
+        <a id="image-download" class="button button-primary" download="隐藏优势发现测评-结果.png">下载图片</a>
+        <img id="result-image-preview" alt="我的隐藏优势测评结果长图" />
+      </div>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="./config.js"></script>
+    <script src="./backend.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
